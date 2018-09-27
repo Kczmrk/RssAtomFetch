@@ -35,7 +35,7 @@ class CsvService implements CsvServiceInterface
         return fclose($this->file);
     }
 
-    private function dateFormat(object $date) :string
+    private function dateFormat(\SimpleXMLElement $date) :string
     {
         return date('Y-m-d H:i:s', strtotime($date));
     }
